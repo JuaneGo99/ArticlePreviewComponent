@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-style: none;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Light-Grayish-Blue);
+    font-size: 13px;
+}
+
+.container{
+    background-color: white;
+    color: var(--Very-Dark-Grayish-Blue);
+    width: 328px;
+    height: 516px;
+    margin: 75px auto 89px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container__image{
+    background-image: url(images/drawers.jpg);
+    background-size: cover;
+    background-position-y: -20px;
+    width: 100%;
+    height: 200px;
+}
+
+.container__information{
+    padding: 40px 35px 20px;
+}
+
+.container__information__title{
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.container__information__description{
+    color: var(--Grayish-Blue);
+    margin-bottom: 36.5px;
+    font-size: 1.01em;
+    
+}
+
+.container__content{
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    bottom: 0;
+    left: 0;
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__content__photo{
+    width: 40px;
+    border-radius: 50px;
+}
+
+.container__content__inf{
+    margin-left: -45px;
+}
+
+.container__content__name{
+    font-weight: 700;
+}
+
+.container__content__date{
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+}
+
+.container__share{
+    background-color: var(--Very-Dark-Grayish-Blue);
+    width: 100%;
+    height: 65px;
+    padding: 10px 35px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    color: var(--Light-Grayish-Blue);
+    bottom: 0;
+    left: 0;
+    margin-top: 25px;
+}
+
+.container__share__icon-share, 
+.container__content__icon-share{
+    /* background-color: var(--Desaturated-Dark-Blue); */
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    padding: 9px 9px;
+    cursor: pointer;
+}
+
+.container__content__icon-share{
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.container__content__icon-share:hover{
+    background-color: var(--Desaturated-Dark-Blue);
+}
+
+.container__content__icon-share:hover path{
+    fill: var(--Light-Grayish-Blue);
+}
+
+
+.container__share__icon-share{
+    background-color: var(--Desaturated-Dark-Blue);
+}
+
+.container__share__icon-share path{
+    fill: var(--Light-Grayish-Blue);
+}
+
+.container__share__title{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+    margin-right: 22px;
+}
+
+.container__share__social-media{
+    cursor: pointer;
+    margin-left: -25px;
+}
+
+.container__share__social-media img{
+    margin-right: 15px;
+}
+
+.show{
+    display: flex;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* -------------- DESKTOP --------------- */
+@media (min-width: 745px){
+    .container{
+        width: 730px;
+        height: 280px;
+        margin: 260px auto 75px;
+        display: flex;
+        overflow: unset;
+    }
+    .container__image{
+        width: 286px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        background-position: unset;
+    }
+    .container__information{
+        width: 445px;
+        height: 100%;
+        padding: 35px 40px 20px;
+        position: relative;
+    }
+    .container__information__title{
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    
+    .container__information__description{
+        margin-bottom: 20px;
+    }
+    .container__content{
+        right: -60px;
+        height: auto;
+        padding: 0 40px;
+        margin-bottom: 20px;
+    }
+    .container__content__photo{
+        margin-right: 15px;
+    }
+    .container__content__inf{
+        margin-left: -170px;
+    }       
+    .container__share{
+        width: 250px;
+        height: 56px;
+        bottom: 80px;
+        left: 262px;
+        border-radius: 8px;
+        z-index: 10;
+    }
+    .container__share::after{
+        content: "";
+        border: 10px solid;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent;
+        position: absolute;
+        left: 115px;
+        top: 100%;
+    }
+    .container__share__icon-share{
+        display: none;
+    }
+    .container__share__social-media img{
+        margin-right: 0;
+        margin-left: 15px;
+    }
+}
